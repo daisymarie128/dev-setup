@@ -11,44 +11,71 @@ First thing you've gotta do is install Xcode.<br>
 
 
 Useful links:<br>
-- [https://wiki.wxwidgets.org/Installing_Xcode](https://wiki.wxwidgets.org/Installing_Xcode)
+[https://wiki.wxwidgets.org/Installing_Xcode](https://wiki.wxwidgets.org/Installing_Xcode)
 
 ### Install Xcode Command Line Tools
 Open up a terminal window and type:<br>
-`xcode-select --install`
+```curl
+xcode-select --install
+```
+
 <br>
 
 If you see this: <br>
-`xcode-select: error: command line tools are already installed, use "Software Update" to install updates`<br>
+```curl
+xcode-select: error: command line tools are already installed, use "Software Update" to install updates
+```
+
+<br>
 You've most likely already got it installed.
 
 If not a dialog box will popup prompting you to install the command line tools. Follow these promts to install.<br>
 When the installation is complete run this:<br>
-`xcode-select -p`<br>
+```curl
+xcode-select -p
+```
+<br>
 
 Which should have outputed something like:<br>
-`/Applications/Xcode.app/Contents/Developer`
+```
+/Applications/Xcode.app/Contents/Developer```
+
 
 ## Install Homebrew
 Homebrew is a very useful package manager.<br>
 To install run this in a terminal window:<br>
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`<br>
+```curl
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+<br>
 
 Now we need to tell the system to use programs installed by Hombrew (in /usr/local/bin) rather than the OS default if it exists. We do this by adding /usr/local/bin to your $PATH environment variable:<br>
 Run this command:<br>
-`echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile`<br>
+```curl
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+```
+<br>
 
 
 After this has finished doing it's thing, run this command to check that it's been installed:<br>
-`brew doctor`
+```curl
+brew doctor
+```
+
 <br>
 
 #### Using brew
 Now that brew is installed you can use this to install packages.<br>
 Commands:<br>
-`brew install PACKAGE_NAME`<br>
+```curl
+brew install PACKAGE_NAME
+```
+<br>
 Packages can be found at these places:<br>
 - [Brew Formulas](http://formulae.brew.sh/)
 - [Other Brew Formulas](http://brewformulas.org/)
 
-`brew update` - this will update all your packages for you
+```curl
+brew update
+```
+ - this will update all your packages for you
